@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            display: flex;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+        }
+        .left {
+            background: linear-gradient(to bottom right, #e6e6fa, #dda0dd);
+            padding: 40px;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        .left h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .left p {
+            font-size: 14px;
+        }
+        .right {
+            padding: 40px;
+            width: 60%;
+        }
+        .right h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .form-group input, .form-group textarea {
+            width: calc(50% - 10px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            width: 100%;
+            resize: none;
+        }
+        .form-group .full-width {
+            width: 100%;
+        }
+        .form-group .half-width {
+            width: calc(50% - 10px);
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .form-actions button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 14px;
+        }
+        .form-actions button.reset {
+            background-color: #f44336;
+        }
+        .form-actions button.submit {
+            background-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>RJ Technology</h2>
+            <h2>M.VERVE</h2>
+            <p>Inspired Applications</p>
+            <p>To connect with us please enter the details</p>
+        </div>
+        <div class="right">
+            <h2>Create an account</h2>
+            <form>
+                <div class="form-group">
+                    <div class="half-width">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    </div>
+                    <div class="half-width">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="half-width">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" placeholder="18-100" required>
+                    </div>
+                    <div class="half-width">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" placeholder="..." required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="full-width">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="abc@xxx.zzz" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="full-width">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="email: abc@gmail.com" required></textarea>
+                        <small>Max. 150 characters</small>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="half-width">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="half-width">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="reset" class="reset">RESET</button>
+                    <button type="submit" class="submit">SUBMIT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
